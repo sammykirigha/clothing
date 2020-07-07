@@ -10,7 +10,6 @@ import SignInSignUpPage from './pages/sign-in-sign-up/sign-in-sign-up';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import {setCurrentUser} from './redux/user/user.actions'
 import {selectCurrentUser} from './redux/user/user.selectors'
-
 import CheckoutPage from './pages/checkout/checkout';
 
 
@@ -36,7 +35,6 @@ class App extends React.Component {
       }
 
       setCurrentUser(userAuth);
-
     });
   }
 
@@ -70,7 +68,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser : selectCurrentUser
+  currentUser : selectCurrentUser,
 })
 
 const mapDispatchToProps = dispatch => ({
